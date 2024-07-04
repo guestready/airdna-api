@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
 
-class ReportRequestSerializer(serializers.Serializer):
+class RentalizerEstimateRequestSerializer(serializers.Serializer):
     accommodates = serializers.IntegerField()
     bathrooms = serializers.IntegerField()
     bedrooms = serializers.IntegerField()
@@ -46,5 +46,5 @@ class PayloadSerializer(serializers.Serializer):
     stats = StatsSerializer()
 
 
-class ReportResponseSerializer(serializers.Serializer):
+class RentalizerEstimateResponseSerializer(serializers.Serializer):
     payload = PayloadSerializer(source="*")
