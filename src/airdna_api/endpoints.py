@@ -18,7 +18,7 @@ class AirDNAEndpoint(PostEndpoint):
         return client_context
 
 
-class RentalizerEndpoint(AirDNAEndpoint):
+class RentalizerEstimateEndpoint(AirDNAEndpoint):
     endpoint_url = "rentalizer/estimate"
     client_class = AirDNAClient
     response_entity_class = ReportResponseSerializer
