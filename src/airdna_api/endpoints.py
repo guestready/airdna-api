@@ -2,8 +2,8 @@ from typing import Any
 
 from generic_api.endpoints import PostEndpoint
 
-from client import AirDNAClient
-from serializers import ReportRequestSerializer, ReportResponseSerializer
+from .client import AirDNAClient
+from .serializers import ReportRequestSerializer, ReportResponseSerializer
 
 
 class AirDNAEndpoint(PostEndpoint):
