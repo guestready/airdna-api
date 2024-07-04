@@ -12,8 +12,8 @@ class AirDNAClient(GenericClient):
     errors_handler_class = HttpErrorsHandler
     retries_handler_class = RetryOnError
 
-    def __init__(self, *args: Any, bearer_token: str, **kwargs: Any) -> None:
-        self.bearer_token = bearer_token
+    def __init__(self, *args: Any, context: dict[str, Any], **kwargs: Any) -> None:
+        self.bearer_token = context["bearer_token"]
         super().__init__(*args, **kwargs)
 
     def get_session_context(self, *args: Any, **kwargs: Any) -> dict[str, Any]:
