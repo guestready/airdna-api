@@ -4,7 +4,7 @@ from generic_api.errors_handler import HttpErrorsHandler
 from generic_api.generics import GenericClient
 from generic_api.retries_handler import RetryOnError
 
-from sessions import AirDNASession
+from .sessions import AirDNASession
 
 
 class AirDNAClient(GenericClient):
