@@ -3,7 +3,7 @@ from typing import Any
 from generic_api.endpoints import PostEndpoint
 
 from .client import AirDNAClient
-from .serializers import ReportRequestSerializer, ReportResponseSerializer
+from .serializers import RentalizerEstimateRequestSerializer, RentalizerEstimateResponseSerializer
 
 
 class AirDNAEndpoint(PostEndpoint):
@@ -21,5 +21,5 @@ class AirDNAEndpoint(PostEndpoint):
 class RentalizerEstimateEndpoint(AirDNAEndpoint):
     endpoint_url = "rentalizer/estimate"
     client_class = AirDNAClient
-    response_entity_class = ReportResponseSerializer
-    request_entity_class = ReportRequestSerializer
+    response_entity_class = RentalizerEstimateResponseSerializer
+    request_entity_class = RentalizerEstimateRequestSerializer
