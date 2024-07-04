@@ -1,0 +1,12 @@
+asgiref==3.8.1
+certifi==2024.7.4
+distlib==0.3.8
+Django==5.0.6
+djangorestframework==3.15.2
+filelock==3.15.4
+generic-api==0.1.0
+pipenv==2024.0.1
+platformdirs==4.2.2
+setuptools==70.2.0
+sqlparse==0.5.0
+virtualenv==20.26.3
