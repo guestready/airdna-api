@@ -39,7 +39,7 @@ class SummarySerializer(serializers.Serializer):
 
 
 class FutureSerializer(serializers.Serializer):
-    metrics = MetricsSerializer()
+    metrics = MetricsSerializer(many=True)
     summary = SummarySerializer()
 
 
