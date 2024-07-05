@@ -44,7 +44,7 @@ class FutureSerializer(serializers.Serializer):
 
 
 class StatsSerializer(serializers.Serializer):
-    future = FutureSerializer(source="*")
+    future = FutureSerializer()
     property_value = serializers.DecimalField(
         max_digits=15, decimal_places=2, required=False, allow_null=True
     )
