@@ -23,6 +23,15 @@ class DetailsSerializer(serializers.Serializer):
     bathrooms = serializers.IntegerField(allow_null=True)
 
 
+class MetricsSerializer(serializers.Serializer):
+    adr = serializers.DecimalField(decimal_places=2, max_digits=17)
+    date = serializers.CharField()
+    occupancy = serializers.DecimalField(decimal_places=2, max_digits=3)
+    revenue = serializers.IntegerField()
+    revenue_lower = serializers.IntegerField()
+    revenue_upper = serializers.IntegerField()
+
+
 class SummarySerializer(serializers.Serializer):
     adr = serializers.DecimalField(max_digits=15, decimal_places=2)
     occupancy = serializers.DecimalField(max_digits=15, decimal_places=2)
@@ -30,7 +39,8 @@ class SummarySerializer(serializers.Serializer):
 
 
 class FutureSerializer(serializers.Serializer):
-    summary = SummarySerializer(source="*")
+    metrics = MetricsSerializer()
+    summary = SummarySerializer()
 
 
 class StatsSerializer(serializers.Serializer):
